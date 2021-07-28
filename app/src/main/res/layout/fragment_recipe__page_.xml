@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E7E7E7"
+    tools:context=".fragments.Recipe_Page_Fragment">
+
+    <ImageView
+        android:id="@+id/recipe_page_Image_Recipe"
+        android:layout_width="300dp"
+        android:layout_height="200dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/recipe_page_Recipe_Title_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="serif"
+        android:text="Recipe Title"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recipe_page_Image_Recipe" />
+
+    <TextView
+        android:id="@+id/recipe_page_Category_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp"
+        android:fontFamily="serif"
+        android:text="Category"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/recipe_page_Ingredients_Title_textview"
+        app:layout_constraintTop_toBottomOf="@+id/recipe_page_Recipe_Title_textview" />
+
+    <TextView
+        android:id="@+id/recipe_page_Ingredients_Title_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:fontFamily="serif"
+        android:text="Ingredients"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recipe_page_Recipe_Title_textview" />
+
+    <TextView
+        android:id="@+id/recipe_page_Instructions_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:fontFamily="serif"
+        android:text="Instructions"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recipe_page_ingredients_Container_textview" />
+
+    <TextView
+        android:id="@+id/recipe_page_ingredients_Container_textview"
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp"
+        android:autoText="false"
+        android:fontFamily="serif"
+        android:scrollbars="vertical"
+        android:text="Ingredients Details"
+        android:textColor="#000000"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recipe_page_Ingredients_Title_textview" />
+
+    <TextView
+        android:id="@+id/recipe_page_Instructions_Container_textview"
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp"
+        android:autoText="false"
+        android:fontFamily="serif"
+        android:scrollbars="vertical"
+        android:text="Instructions Details"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recipe_page_Instructions_textview" />
+
+    <Button
+        android:id="@+id/recipe_page_Edit_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp"
+        android:fontFamily="serif"
+        android:text="Edit"
+        app:backgroundTint="#FAC968"
+        app:layout_constraintEnd_toStartOf="@+id/recipe_page_Delete_btn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recipe_page_Instructions_Container_textview" />
+
+    <Button
+        android:id="@+id/recipe_page_Delete_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp"
+        android:fontFamily="serif"
+        android:text="Delete"
+        app:backgroundTint="#FAC968"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/recipe_page_Edit_btn"
+        app:layout_constraintTop_toBottomOf="@+id/recipe_page_Instructions_Container_textview" />
+</androidx.constraintlayout.widget.ConstraintLayout>

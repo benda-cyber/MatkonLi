@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1067774337575",
+    "project_id": "matkon-li",
+    "storage_bucket": "matkon-li.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1067774337575:android:8fd06a31cb0695360e2402",
+        "android_client_info": {
+          "package_name": "com.matanhassin.matkonli"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1067774337575-8v5f6i7ha31bjmgg2pn3m152rhqh9ko8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCpsQSsHssfWIJRA3h7N57PvQDjkJPOWLY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1067774337575-8v5f6i7ha31bjmgg2pn3m152rhqh9ko8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

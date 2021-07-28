@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navigation"
+    app:startDestination="@id/home_Fragment">
+
+    <fragment
+        android:id="@+id/home_Fragment"
+        android:name="com.matanhassin.matkonli.fragments.HomeFragment"
+        android:label="Home Screen"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_homeFragment_to_listOfRecipesFragment"
+            app:destination="@id/list_Of_Recipes_Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/list_Of_Recipes_Fragment"
+        android:name="com.matanhassin.matkonli.fragments.ListOfRecipesFragment"
+        android:label="Recipe Lists"
+        tools:layout="@layout/fragment_list_of_recipes">
+        <action
+            android:id="@+id/action_list_Of_Recipes_Fragment_to_recipe_Page_Frag"
+            app:destination="@id/recipe_Page_Fragment" />
+        <argument
+            android:name="category"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/recipe_Page_Fragment"
+        android:name="com.matanhassin.matkonli.fragments.Recipe_Page_Fragment"
+        android:label="Recipe Page"
+        tools:layout="@layout/fragment_recipe__page_">
+        <action
+            android:id="@+id/action_recipe_Page_Fragment_to_edit_Recipe_Fragment"
+            app:destination="@id/edit_Recipe_Fragment" />
+        <argument
+            android:name="recipe"
+            app:argType="com.matanhassin.matkonli.model.Recipe" />
+    </fragment>
+    <fragment
+        android:id="@+id/edit_Recipe_Fragment"
+        android:name="com.matanhassin.matkonli.fragments.Edit_Recipe_Fragment"
+        android:label="Edit Recipe"
+        tools:layout="@layout/fragment_edit__recipe_" >
+        <argument
+            android:name="recipe"
+            app:argType="com.matanhassin.matkonli.model.Recipe" />
+    </fragment>
+    <fragment
+        android:id="@+id/profile_Fragment"
+        android:name="com.matanhassin.matkonli.fragments.Profile_Fragment"
+        android:label="Profile Page"
+        tools:layout="@layout/fragment_profile_">
+        <action
+            android:id="@+id/action_profile_Fragment_to_edit_Profile_Fragment"
+            app:destination="@id/edit_Profile_Fragment" />
+        <action
+            android:id="@+id/action_profile_Fragment_to_my_Recipes_List_Fragment"
+            app:destination="@id/my_Recipes_List_Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/edit_Profile_Fragment"
+        android:name="com.matanhassin.matkonli.fragments.Edit_Profile_Fragment"
+        android:label="Edit Profile"
+        tools:layout="@layout/fragment_edit__profile_" />
+    <fragment
+        android:id="@+id/my_Recipes_List_Fragment"
+        android:name="com.matanhassin.matkonli.fragments.My_Recipes_List_Fragment"
+        android:label="My Recipes"
+        tools:layout="@layout/fragment_my__recipes__list_">
+        <action
+            android:id="@+id/action_my_Recipes_List_Fragment_to_recipe_Page_Fragment"
+            app:destination="@id/recipe_Page_Fragment" />
+        <argument
+            android:name="userId"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/new_Recipe_Fragment"
+        android:name="com.matanhassin.matkonli.fragments.New_Recipe_Fragment"
+        android:label="Create Recipe"
+        tools:layout="@layout/fragment_new__recipe_" />
+</navigation>
